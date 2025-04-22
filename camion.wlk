@@ -9,7 +9,8 @@ object camion {
 
 	method todoPesoPar() = cosas.all({cosa => cosa.peso().even()})
 
-	method hayAlgunoQuePesa(peso) = cosas.anybody({cosa => cosa.peso() == peso})
+	method hayAlgunoQuePesa(peso) = cosas.any({cosa => cosa.peso() == peso})
 
+	method elDeNivel(nivel) = cosas.find({cosa => cosa.nivelPeligrosidad()})
 	
 }
